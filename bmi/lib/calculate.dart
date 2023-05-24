@@ -2,11 +2,11 @@ import 'package:bmi/response.dart';
 
 class Calculate{
   
-  static Response bmi(height,weight){
+  static Response bmi(request){
     double bmi;
     String message='';
-    height=height/100;
-    bmi = (weight / (height * height));
+    request.height=request.height/100;
+    bmi = (request.weight / (request.height * request.height));
 
     if (bmi < 18.5) {
       message = "You are in Under weight category.";
